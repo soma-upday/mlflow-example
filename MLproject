@@ -1,0 +1,11 @@
+name: tutorial
+
+docker_env:
+  image: fastgenomics/sklearn
+
+entry_points:
+  main:
+    parameters:
+      alpha: float
+      l1_ratio: {type: float, default: 0.1}
+    command: "python train.py {alpha} {l1_ratio}"
